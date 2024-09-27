@@ -1,38 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #222; /* Color de fondo oscuro */
+  color: #fff; /* Color del texto */
+  border: solid red;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header {
+  border: solid rebeccapurple;
+  width: 100%; /* Ancho total */
+  background-color: rgba(34, 34, 34, 0.9); /* Fondo semitransparente */
+  padding: 0;
+  position: fixed; /* Fija la cabecera en la parte superior */
+  top: 0; /* Asegura que esté en la parte superior */
+  left: 0; /* Asegura que esté alineada a la izquierda */
+  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.logo a {
+  border: solid red;
+  width: 20%;
+  font-size: 2.7em;
+  margin: 50px;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
+}
+
+.contenedor-header {
+  border: solid palegreen;
+  display: flex;
+  /* position: inherit; */
+  margin-left: 550px;
+  width: 57%;
+  height: 28px;
+  text-align: center;
+  font-size: 18px;
+}
+
+#menu {
+  display: flex;
+  list-style: none; /* Sin viñetas */
+  justify-content: center; /* Centrado */
+}
+
+#menu li {
+  margin: 0 20px; /* Espacio entre los elementos del menú */
+}
+
+#menu a {
+  color: #fff; /* Color del texto del menú */
+  text-decoration: none; /* Sin subrayado */
+  font-size: 1.1em; /* Tamaño del texto del menú */
+  transition: color 0.3s; /* Transición suave para el color */
+}
+
+#menu a:hover {
+  color: #39ff14; /* Color al pasar el mouse */
+}
+
+.nav-responsive {
+  display: none; /* Ocultar por defecto */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .nav-responsive {
+      display: block; /* Mostrar icono de menú en pantallas pequeñas */
+      font-size: 1.5em; /* Tamaño del icono */
+      text-align: center; /* Centrado */
   }
-  to {
-    transform: rotate(360deg);
+
+  #menu {
+      display: none; /* Ocultar el menú en pantallas pequeñas */
+      flex-direction: column; /* Vertical */
+      position: absolute; /* Para que se superponga */
+      top: 60px; /* Asegura que no se superponga al encabezado */
+      left: 0;
+      right: 0;
+      background-color: rgba(34, 34, 34, 0.9);
+      padding: 20px 0;
   }
+
+  #menu.active {
+      display: flex; /* Mostrar menú cuando está activo */
+  }
+} 
+
+/* Asegúrate de que el contenido principal tenga un margen superior */
+.main-content {
+  margin-top: 80px; /* Ajusta según la altura de tu cabecera */
 }
