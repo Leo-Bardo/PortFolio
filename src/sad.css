@@ -1,0 +1,93 @@
+/* RECICLADORA CSS */
+ /* display: inline-flex;
+ position: fixed; Fija la cabecera en la parte superior */
+.dasd
+{
+	display: flex;
+	position: fixed; 
+	display: inline-flex;
+}
+#flex { display: flex;
+	justify-content: center;
+	width: 100%;}
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+*{
+	font-family: monospace;
+	margin: 0;
+	padding: 0;
+}
+html{
+	scroll-behavior: smooth;
+}
+
+#nav{
+	background-color: #1cb596;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	/*display: none;*/
+
+}
+
+/*MENU*/
+#menu{
+	background: #1cb596;
+	position: fixed;
+	width: 100%;
+	display: flex;
+	top: -10px;
+	left: 0;
+	z-index: 99;
+	height: 100px;
+}
+.contenedor-header header{
+	margin: auto;
+	display: flex;
+	align-items: center;
+	padding: 10px 20px;
+}
+@media screen and (max-width: 600px) {
+	.contenedor-header header nav{
+		display: none;
+		display: flex;
+	}
+}
+.contenedor-header header .logo a{
+	font-size: 36px;
+	color: #1CB698;
+	text-decoration: none;
+}
+.contenedor-header header ul{
+	display: flex;
+	list-style: none;
+	font-family: monospace;
+	font-size: 24px;
+	margin-left: 100px;
+
+}
+.contenedor-header header nav ul li a{
+	text-align: none;
+	color: #fff;
+	margin: 0 10px;
+	padding: 3	px;
+	transition: .5s;
+	text-decoration: none;
+}
+
+.contenedor-header header nav ul li a:hover{
+	color: #1CB698;
+}
+
+
+
+

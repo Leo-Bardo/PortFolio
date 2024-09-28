@@ -9,42 +9,44 @@ body {
   font-family: 'Arial', sans-serif;
   background-color: #222; /* Color de fondo oscuro */
   color: #fff; /* Color del texto */
-  border: solid red;
 }
 
 .App {
-  display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .App-header {
-  border: solid rebeccapurple;
-  width: 100%; /* Ancho total */
+  /* border: solid rebeccapurple; */
+  width: 100%; /* Ancho total */  
   background-color: rgba(34, 34, 34, 0.9); /* Fondo semitransparente */
-  padding: 0;
-  position: fixed; /* Fija la cabecera en la parte superior */
-  top: 0; /* Asegura que esté en la parte superior */
-  left: 0; /* Asegura que esté alineada a la izquierda */
-  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+  margin: 0 auto;
+  position: relative;
+  padding: 35px;
 }
+div{
+  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
 
+}
 .logo a {
-  border: solid red;
-  width: 20%;
+  /* border: solid red; */
+  width: 80%;
   font-size: 2.7em;
-  margin: 50px;
+  margin: 0 -62px;
   color: #ffffff;
   text-decoration: none;
   text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
 }
-
+/* display: flex; justify-content: center; width: 100%; */
 .contenedor-header {
   border: solid palegreen;
-  display: flex;
-  /* position: inherit; */
-  margin-left: 550px;
-  width: 57%;
+  box-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
+  margin-left: 510px;
+  width: 60%;
   height: 28px;
   text-align: center;
   font-size: 18px;
@@ -100,7 +102,3 @@ body {
   }
 } 
 
-/* Asegúrate de que el contenido principal tenga un margen superior */
-.main-content {
-  margin-top: 80px; /* Ajusta según la altura de tu cabecera */
-}
